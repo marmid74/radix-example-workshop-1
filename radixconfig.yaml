@@ -1,10 +1,13 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: ws-www
+  name: marmid-app
 spec:
   environments:
     - name: production
+      build:
+        from: master
+    - name: development
       build:
         from: master
   components:
